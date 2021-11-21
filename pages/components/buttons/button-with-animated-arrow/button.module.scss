@@ -1,0 +1,15 @@
+@keyframes bounce {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(5px);
+    }
+}
+
+.animate:hover {
+    svg {
+        animation: bounce 250ms alternate infinite;
+    }
+}

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Source+Sans+Pro:wght@300&family=Nunito+Sans&display=swap');
+
+body {
+    color: #333333;
+}
+
+a {
+    position: relative;
+    border-bottom: 3px solid #DD052B;
+    transition: all 0.25s linear;
+    padding: 1px 4px;
+    color: #333333;
+}
+
+a::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #69CF61;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    /* this is to match where the border is */
+    transform-origin: left;
+    transform: scale(0);
+    transition: 0.25s linear;
+    /*   will-change: transform; */
+}
+
+a:hover::before {
+    transform: scale(1);
+}
+
+a.nav-link {
+    border: none;
+}
+
+a.nav-link::before {
+    content: none;
+}
